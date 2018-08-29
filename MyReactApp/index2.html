@@ -13,17 +13,19 @@
 <script type="text/babel">
     (() => {
 
-        // Componentの利用
-
         function Counter(props) {
-            return <li style={{backgroundColor:props.color}}>0 {props.color}</li>
+            // return <div>0 {props.color}</div>;
+            // return <div style={{backgroundColor:props.color}}>0</div>;
+            return <li style={{backgroundColor:props.color}}>0</li>;
         }
 
         ReactDOM.render(
-            <div>
-                <Counter color="tomato"/>
-                <Counter color="skyblue"/>
-                <Counter color="limegreen"/>
+            <div className="container">
+                <ul>
+                    <Counter color="tomato"/>
+                    <Counter color="skyblue"/>
+                    <Counter color="limegreen"/>
+                </ul>
             </div>,
             document.getElementById('root')
         );
